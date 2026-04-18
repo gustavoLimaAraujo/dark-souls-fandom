@@ -1,0 +1,144 @@
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    text-align: justify;
+    font-family: "Kaisei Opti", serif;
+}
+
+/* Estilizando o Header */
+header{
+    height: 100px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5rem;
+}
+
+header nav ul{
+    display: flex;
+    gap: 96px;
+}
+header nav ul li a{
+    color: #D9CBA3;
+    font-size: 24px;
+}
+
+/* Estilização do Banner */
+.banner{
+    height: 88.9vh;
+    background-image: url("../assets/imgs/background-dark-souls.png");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.banner figure{
+    margin-top: -5rem;
+}
+
+
+.banner figure,
+.banner figure img{
+    width: 978px;
+    height: 169px;
+    margin-bottom: 20px;
+}
+
+.banner p{
+    font-size: 24px;
+    color: #FFF;
+    text-shadow: 
+        1px  1px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000;
+    width: 600px;
+    text-align: center;
+}
+
+/* Estilizando a sessão de explicação */
+.sessao-explicativa{
+    height: 500px;
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sessao-explicativa .texto{
+    width: 600px;
+}
+
+.sessao-explicativa h1{
+    color: #D9CBA3;
+    border-bottom: 5px solid #D9CBA3;
+    width: fit-content;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sessao-explicativa p,
+.sessao-explicativa ul li{
+    width: 600px;
+    text-indent: 30px;
+    line-height: 1.5rem;
+    color: #FFF;
+}
+.sessao-explicativa ul li{
+    text-indent: 60px;
+}
+
+.sessao-explicativa .button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sessao-explicativa button{
+    width: 200px;
+    height: 50px;
+    background-color: #F2EDD5;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.sessao-explicativa figure,
+.sessao-explicativa figure img{
+    height: 366px;
+}
+
+/* Estilizando a sessão de explicação quando o texto está na esquerda */
+
+.texto-esquerda{
+    background-color: #1B1A18;
+}
+
+.texto-esquerda .texto{
+    order: 2;
+}
+
+/* Estilizando o footer */
+footer{
+    height: 100px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+footer h2 a {
+    color: #FFF;
+}
