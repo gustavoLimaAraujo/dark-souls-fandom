@@ -1,6 +1,5 @@
 let header = document.querySelector('.header');
 let footer = document.querySelector('.footer');
-let tipografia = document.querySelector('.tipografia');
 
 header.innerHTML = `
     <header class="cor-primaria">
@@ -12,7 +11,7 @@ header.innerHTML = `
         <nav>
             <ul>
                 <li>
-                    <a href="#">História do Jogo</a>
+                    <a href="historia.html">História do Jogo</a>
                 </li>
                 <li>
                     <a href="sobre.html">Sobre o Jogo</a>
@@ -32,10 +31,4 @@ footer.innerHTML = `
     <footer class="cor-primaria">
         <h2>Todos os direitos reservados - © 2026 <a href="https://github.com/gustavoLimaAraujo">gustavoLimaAraujo</a></h2>
     </footer>
-`
-
-tipografia.innerHTML = `
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
 `

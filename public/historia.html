@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Souls Fandom - História do Jogo</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <div class="header"></div>
+
+    <section class="section-carrossel">
+        <div class="card">
+            <button onclick="anteriorCard()">
+                <figure class="seta-esquerda">
+                    <img src="assets/imgs/seta-direita.png" alt="Imagem de uma seta para a direita">
+                </figure>
+            </button>
+
+            <div class="texto">
+                <h1 class="titulo">A Primeira Chama</h1>
+                <p class="paragrafo">O mundo de Dark Souls é regido por ciclos de ascensão e queda determinados pela Primeira Chama, uma força que sustenta a realidade e define as distinções entre vida, morte, calor e frio. Quando essa chama enfraquece, o mundo entra em colapso: o tempo e o espaço se desintegram, as terras convergem e a distinção entre a vida e a morte desaparece, condenando a humanidade à maldição dos mortos-vivos. Para evitar o início de uma Era das Trevas, marcada pelo fim do poder dos deuses e pelo domínio do caos, é necessário que um portador de uma alma poderosa se sacrifique na fogueira original, servindo de combustível para renovar a Era do Fogo e manter a ordem do mundo por mais um período.</p>
+            </div>
+
+            <button onclick="proximoCard()">
+                <figure class="seta-direita">
+                    <img src="assets/imgs/seta-direita.png" alt="Imagem de uma seta para a direita">
+                </figure>
+            </button>
+
+        </div>
+    </section>
+
+
+    <div class="footer"></div>
+
+    <script src="js/componentesReutilizaveis.js"></script>
+    <script>
+        let contador = 0;
+        let titulo = document.querySelector(".titulo");
+        let texto = document.querySelector(".paragrafo");
+
+        let arrayTitulos = [
+            "<h1>A Primeira Chama</h1>",
+            "<h1>Almas dos Lordes</h1>",
+            "<h1>A Chama do Caos</h1>",
+            "<h1>Gwyn e fragmentos de sua alma</h1>",
+            "<h1>A criação dos asilos</h1>"
+        ]
+
+        let arrayTextos = [
+            "<p>O mundo de Dark Souls é regido por ciclos de ascensão e queda determinados pela Primeira Chama, uma força que sustenta a realidade e define as distinções entre vida, morte, calor e frio. Quando essa chama enfraquece, o mundo entra em colapso: o tempo e o espaço se desintegram, as terras convergem e a distinção entre a vida e a morte desaparece, condenando a humanidade à maldição dos mortos-vivos. Para evitar o início de uma Era das Trevas, marcada pelo fim do poder dos deuses e pelo domínio do caos, é necessário que um portador de uma alma poderosa se sacrifique na fogueira original, servindo de combustível para renovar a Era do Fogo e manter a ordem do mundo por mais um período.</p>",
+            "<p>As poderosas Almas dos Lordes foram retiradas da Primeira Chama, usadas  para derrotar os dragões e, posteriormente, para estabelecer reinos. As  almas estão inextricavelmente (e inexplicavelmente) ligadas ao fogo.  Almas são vida, e vida é fogo; é lógico que almas também sejam fogo. Sem a Primeira Chama e sem almas, não há vida. O portador de uma alma  poderosa, chamado Lorde, que se liga à Primeira Chama, reacende as  chamas com sua própria alma, devolvendo-lhes a vida. No fim, pode-se  esperar que todas as almas tenham retornado à Primeira Chama e que a Era do Fogo tenha efetivamente chegado ao fim.</p>",
+            "<p>Diante da inevitabilidade do fim da Era do Fogo, surgiram tentativas desesperadas de evitar o sacrifício pessoal, mas todas resultaram em tragédia. A Bruxa de Izalith tentou replicar a Primeira Chama através de feitiçaria, mas o experimento falhou catastroficamente, gerando a Chama do Caos e transformando sua linhagem em demônios deformados que passaram a assolar o mundo.</p><p>Após Gwyn enfrentar e conter essa ameaça, ele aceitou que não havia outra alternativa e, orientado pela serpente Frampt, ofereceu-se como combustível para a Primeira Chama. Esse ato prolongou a era, mas consumiu seus seguidores, cujas almas foram queimadas, deixando para trás apenas os Cavaleiros Negros: armaduras vazias que vagam sem consciência, atacando qualquer um que cruze seu caminho.</p>",
+            "<p>Antes de se sacrificar, Gwyn distribuiu fragmentos de sua alma poderosa entre seus aliados mais leais: seus quatro cavaleiros de elite, o dragão traidor Seath — nomeado Duque por sua ajuda na guerra — e os Quatro Reis de Nova Londo. Enquanto isso, no reino de Oolacile, a influência de outra serpente primordial levou os humanos a despertarem Manus, o humano ancestral. </p> <p>A ressurreição de Manus o transformou no Pai do Abismo, uma entidade cuja humanidade descontrolada corrompeu o povo em abominações e quase antecipou a Era das Trevas. Embora Manus tenha sido derrotado, Oolacile foi completamente consumida e apagada da história, restando apenas a Princesa Dusk como testemunha desse reino esquecido.</p>",
+            "<p>Sob a orientação de Gwyndolin e da serpente Frampt, foi estabelecido um sistema para guiar a humanidade e preservar a Era do Fogo através de asilos que abrigam os mortos-vivos. A missão desses seres amaldiçoados é provar seu valor ao derrotar o demônio do Asilo e seguir em uma jornada para tocar os Sinos do Despertar, obter o Vaso do Senhor e recuperar os fragmentos da alma de Gwyn.</p> <p>Ao oferecer essas almas poderosas como sacrifício, o caminho para a Fornalha da Primeira Chama é aberto, permitindo que o escolhido renove o ciclo por mais mil anos. Esse processo garante aos vivos um período de paz e aos mortos-vivos a libertação da 'verdadeira morte', enquanto aquele que se conecta à chama permanece queimando em agonia consciente até ser substituído, perpetuando o ciclo eternamente."
+        ]
+
+        function proximoCard() {
+            contador++;
+
+            if(contador == arrayTextos.length){
+                contador = 0
+            }
+            titulo.innerHTML = arrayTitulos[contador];
+            texto.innerHTML = arrayTextos[contador];
+        };
+
+        function anteriorCard() {
+            contador --;
+            if(contador < 0){
+                contador = arrayTextos.length - 1;
+            }
+            titulo.innerHTML = arrayTitulos[contador];
+            texto.innerHTML = arrayTextos[contador];
+        };
+
+
+    </script>
+
+</body>
+</html>

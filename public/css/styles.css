@@ -1,3 +1,6 @@
+/* Importando princípal fonte */
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+
 /* Reset básico */
 *{
     margin: 0;
@@ -261,4 +264,60 @@ footer h2 a {
 
 .section-cadastro .formulario input{
     margin: 1rem 0;
+}
+
+/* Estilizando a tela de história */
+.section-carrossel{
+    height: 77.7vh;
+    background-image: url("../assets/imgs/firelink.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-carrossel .card{
+    width: 900px;
+    height: 500px;
+    background-color: rgba(34, 34, 34, 0.8);
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-carrossel .card .texto{
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-carrossel .card h1{
+    color: #D9CBA3;
+    border-bottom: 3px solid #D9CBA3;
+    width: fit-content;
+    text-align: center;
+    font-size: 32px;
+    margin-top: -2rem;
+}
+
+.section-carrossel .card p{
+    text-indent: 30px;
+    color: #FFF;
+    width: 650px;
+}
+
+.section-carrossel .card button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.section-carrossel .card button .seta-esquerda{
+    transform: rotate(180deg);
 }
