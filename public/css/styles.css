@@ -8,10 +8,22 @@
     font-family: "Kaisei Opti", serif;
 }
 
+/* Definindo algumas cores principais */
+.cor-primaria{
+    background-color: #222;
+}
+.cor-segundaria{
+    background-color: #1b1a18;
+}
+
 /* Estilizando o Header */
+.header{
+    position: sticky;
+    top: 0;
+}
+
 header{
     height: 100px;
-    background-color: #222;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,7 +85,6 @@ header nav ul li a:hover{
 /* Estilizando a sessão de explicação */
 .sessao-explicativa{
     height: 500px;
-    background-color: #222;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -119,6 +130,9 @@ header nav ul li a:hover{
     cursor: pointer;
     transition: 1s ease-in-out;
 }
+.sessao-explicativa button a{
+    color: #000;
+}
 
 .sessao-explicativa button:hover{
     width: 250px;
@@ -132,10 +146,6 @@ header nav ul li a:hover{
 
 /* Estilizando a sessão de explicação quando o texto está na esquerda */
 
-.texto-esquerda{
-    background-color: #1B1A18;
-}
-
 .texto-esquerda .texto{
     order: 2;
 }
@@ -143,7 +153,6 @@ header nav ul li a:hover{
 /* Estilizando o footer */
 footer{
     height: 100px;
-    background-color: #222;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,4 +161,104 @@ footer{
 
 footer h2 a {
     color: #FFF;
+}
+
+/* Estilizando o sobre.html */
+.plano-de-fundo{
+    height: 100%;
+    background-image: url('../assets/imgs/undead-bonfire.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.plano-de-fundo main{
+    margin: auto;
+    padding: 2rem 0;
+    width: 80%;
+}
+
+/* Estilizando o login */
+
+.section-login{
+    height: 88.9vh;
+    background-image: url('../assets/imgs/undead-persistindo.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    padding-left: 7rem;
+    align-items: center;
+}
+
+.formulario{
+    width: 500px;
+    height: 600px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.formulario h1{
+    color: #D9CBA3;
+    border-bottom: 5px solid #D9CBA3;
+    width: fit-content;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.formulario input{
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #D9CBA31A;
+    color: #FFF;
+    padding-left: 2rem;
+    border: 3px solid #D9CBA3;
+    margin: 2rem 0;
+}
+
+.formulario button{
+    width: 300px;
+    height: 50px;
+    background-color: #F2EDD5;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    margin-bottom: 1rem;
+}
+.formulario button:hover{
+    width: 360px;
+    height: 60px;
+}
+
+.formulario p,
+.formulario a{
+    color: #FFF;
+    transition: 1s ease-in-out;
+}
+
+.formulario a:hover{
+    font-size: 20px;
+}
+
+/* Estilizando o cadastro */
+
+.section-cadastro{
+    height: 88.9vh;
+    background-image: url('../assets/imgs/solaire-admirando-sol.png');
+
+    display: flex;
+    padding-left: 7rem;
+    align-items: center;
+}
+
+.section-cadastro .formulario input{
+    margin: 1rem 0;
 }

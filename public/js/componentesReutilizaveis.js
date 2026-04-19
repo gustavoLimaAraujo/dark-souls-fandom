@@ -1,8 +1,9 @@
 let header = document.querySelector('.header');
 let footer = document.querySelector('.footer');
+let tipografia = document.querySelector('.tipografia');
 
 header.innerHTML = `
-    <header>
+    <header class="cor-primaria">
         <a href="index.html">
             <figure>
                 <img src="assets/imgs/solaire-icon.png" alt="Icon do Solaire">
@@ -14,13 +15,13 @@ header.innerHTML = `
                     <a href="#">História do Jogo</a>
                 </li>
                 <li>
-                    <a href="#">Sobre o Jogo</a>
+                    <a href="sobre.html">Sobre o Jogo</a>
                 </li>
                 <li>
-                    <a href="#">Cadastro</a>
+                    <a href="cadastro.html">Cadastro</a>
                 </li>
                 <li>
-                    <a href="#">Login</a>
+                    <a href="login.html">Login</a>
                 </li>
             </ul>
         </nav>
@@ -28,7 +29,13 @@ header.innerHTML = `
 `
 
 footer.innerHTML = `
-    <footer>
+    <footer class="cor-primaria">
         <h2>Todos os direitos reservados - © 2026 <a href="https://github.com/gustavoLimaAraujo">gustavoLimaAraujo</a></h2>
     </footer>
+`
+
+tipografia.innerHTML = `
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
 `
