@@ -47,6 +47,28 @@ header nav ul li a:hover{
     color: #FFF;
 }
 
+header button{
+    background: none;
+    border: none;
+}
+
+header button{
+    color: #D9CBA3;
+    font-size: 18px;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+header button:hover{
+    font-size: 20px;
+    color: #FFF;
+}
+
+header button figure{
+    display: flex;
+    gap: 1rem;
+}
+
 /* Estilização do Banner */
 .banner{
     height: 88.9vh;
@@ -320,4 +342,71 @@ footer h2 a {
 
 .section-carrossel .card button .seta-esquerda{
     transform: rotate(180deg);
+}
+
+/* Estilizando o arquivo home.html */
+.section-banner{
+    height: 77.7vh;
+    background: url('../assets/imgs/home-banner.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.section-banner h1{
+    color: #FFF;
+    font-size: 64px;
+}
+
+.section-banner .cards {
+    height: 250px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.section-banner .cards .card{
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #222;
+    color: #FFF;
+    transition: 1s ease-in-out;
+}
+
+.section-banner .cards .card:hover{
+    width: 420px;
+    height: 220px;
+}
+
+.section-banner .cards .card button{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.section-banner .cards .card button h2{
+    color: #D9CBA3;
+    border-bottom: 5px solid #D9CBA3;
+    width: fit-content;
+    text-align: center;
+    font-size: 32px;
+}
+
+.section-banner .cards .card button p{
+    color: #FFF;
+    text-align: center;
+    width: 290px;
 }
