@@ -1,0 +1,29 @@
+{
+  "name": "dark-souls-fandom",
+  "version": "1.0.0",
+  "description": "Projeto com o intuito de ser um fórum de Dark Souls I. No qual, jogadores se encontram para conversar sobre dicas, ajuda, história e builds do jogo.",
+  "homepage": "https://github.com/gustavoLimaAraujo/dark-souls-fandom#readme",
+  "bugs": {
+    "url": "https://github.com/gustavoLimaAraujo/dark-souls-fandom/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoLimaAraujo/dark-souls-fandom.git"
+  },
+  "license": "MIT",
+  "author": "gustavoLimaAraujo",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.1",
+    "mysql2": "^3.9.4",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  },
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon --exec node app.js"
+  }
+}
