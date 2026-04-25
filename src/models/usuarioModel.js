@@ -1,8 +1,5 @@
-var database = require("../database/config")
+var database = require("../database/config.js")
 
-// Autentificação do Login, precisa-se arrumar. Estou focando no Cadastro por enquanto
-
-/*
 function autenticar(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucaoSql = `
@@ -11,9 +8,8 @@ function autenticar(email, senha) {
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
-*/
 
-// Coloque os mesmos parâmetros aqui. Todos os parâmetros que eu ineri na função 'cadastar', são as colunas da minha entidade 'usuario'
+// Coloque os mesmos parâmetros aqui. Todos os parâmetros que eu inseri na função 'cadastar', são as colunas da minha entidade 'usuario'
 function cadastrar(nome_usuario, email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome_usuario, email, senha);
     
@@ -26,6 +22,6 @@ function cadastrar(nome_usuario, email, senha) {
 }
 
 module.exports = {
-    autenticar,
+    // autenticar,
     cadastrar
 };

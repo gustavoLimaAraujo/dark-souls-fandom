@@ -288,6 +288,45 @@ footer h2 a {
     margin: 1rem 0;
 }
 
+/* Estilizando o campo de erro do cadastro */
+.alerta_erro .card_erro {
+    display: none;
+    background-color: #222;
+    color: #D9CBA3;
+    width: 500px;
+    height: 200px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 20%;
+
+    /* Centralizando uma div com o position: fixed; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+.alerta_erro .card_erro #mensagem_erro{
+    width: 80%;
+
+    font-weight: 500;
+    font-size: 22px;
+    position: fixed;
+    top: 25%;
+    left: 10%;
+}
+
+
+.loading-div {
+  width: 50px;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+
 /* Estilizando a tela de história */
 .section-carrossel{
     height: 77.7vh;
@@ -410,3 +449,4 @@ footer h2 a {
     text-align: center;
     width: 290px;
 }
+

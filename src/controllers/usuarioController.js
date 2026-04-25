@@ -1,4 +1,4 @@
-var usuarioModel = require("../models/usuarioModel");
+var usuarioModel = require("../models/usuarioModel.js");
 // var aquarioModel = require("../models/aquarioModel");
 
 // Autentificação do Login, precisa-se arrumar. Estou focando no Cadastro por enquanto
@@ -70,16 +70,15 @@ function cadastrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
     } else {
-
+        
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        // Os parâmetros que coloquei na função cadastar do usuarioModel, foi as mesmas que eu usei na função cadastrar do arquivo 'usuarioModel'
-        usuarioModel.cadastrar(nome_usuario, email, senha)
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
+        usuarioModel.cadastrar(nome, email, senha)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
                     console.log(erro);
                     console.log(
                         "\nHouve um erro ao realizar o cadastro! Erro: ",
@@ -92,6 +91,6 @@ function cadastrar(req, res) {
 }
 
 module.exports = {
-    autenticar,
+    // autenticar,
     cadastrar
 }
