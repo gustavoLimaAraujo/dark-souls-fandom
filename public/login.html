@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +13,33 @@
     
     <div class="header"></div>
 
+    <div class="alerta_erro">
+      <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
+      </div>
+    </div>
+
     <section class="section-login">
         <form action="" class="formulario">
             <h1>Login</h1>
-            <input type="text" placeholder="Insira o seu e-mail">
-            <input type="text" placeholder="Insira o sua senha">
+            <input type="text" placeholder="Insira o seu e-mail" id="ipt_email">
+            <input type="text" placeholder="Insira o sua senha" id="ipt_senha">
 
-            <button type="button" onclick="window.location.href='home.html'">Login</button>
+            <button type="button" onclick="entrar()">Login</button>
             <p>Ainda não tem uma conta? <a href="cadastro.html">Registre-se</a></p>
 
         </form>
     </section>
 
+    <div id="div_aguardar" class="loading-div">
+        <img src="./assets/circle-loading.gif" id="loading-gif">
+    </div>
+
+    <div id="div_erros_login"></div>
+    
+    <script src="js/sessao.js"></script>
     <script src="js/componentesReutilizaveis.js"></script>
+    <script src="js/validacaoLogin.js"></script>
 
 </body>
 </html>
