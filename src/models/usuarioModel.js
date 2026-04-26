@@ -29,8 +29,15 @@ function cadastrar(nome_usuario, email, senha) {
     return database.executar(instrucaoSql);
 }
 
+function listar() {
+  var instrucaoSql = `SELECT * FROM usuario`;
+
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
     autenticar,
     buscarUsuarioPorEmail,
-    cadastrar
+    cadastrar,
+    listar
 };

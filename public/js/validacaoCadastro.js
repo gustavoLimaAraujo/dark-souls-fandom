@@ -56,21 +56,25 @@ else if(nomeVar.length <= 1){
     setInterval(sumirMensagem, 5000);
 }
 
+console.log(listaUsuariosCadastrados)
+console.log(nomeVar)
+console.log(emailVar)
+
 // Verificando se o usuário e o e-mail é já existe dentro do banco de dados
 for (let i = 0; i < listaUsuariosCadastrados.length; i++) {
-    if (listaUsuariosCadastrados[i].nome_usuario == nomeVar && listaUsuariosCadastrados[i].email == emailVar) {
+    if (listaUsuariosCadastrados[i].nome_usuario != nomeVar && listaUsuariosCadastrados[i].email != emailVar) {
         idUsuarioVincular = listaUsuariosCadastrados[i].id;
         console.log("Nome de usuário e E-mail válido.");
         break;
     } else {
-    cardErro.style.display = "block";
-    if(listaUsuariosCadastrados[i].nome_usuario != nomeVar){
-        mensagem_erro.innerHTML = "Nome de usuário já cadastrados!";
-    }
-    if(listaUsuariosCadastrados[i].email != emailVar){
-        mensagem_erro.innerHTML = "E-mail já cadastrados!";
-    }
-    finalizarAguardar();
+        cardErro.style.display = "block";
+        if(listaUsuariosCadastrados[i].nome_usuario == nomeVar){
+            mensagem_erro.innerHTML = "Nome de usuário já cadastrados!";
+        }
+        if(listaUsuariosCadastrados[i].email == emailVar){
+            mensagem_erro.innerHTML = "E-mail já cadastrados!";
+        }
+        finalizarAguardar();
     }
 }
 
@@ -81,13 +85,13 @@ fetch("/usuarios/cadastrar", {
     "Content-Type": "application/json",
     },
     body: JSON.stringify({
-    // crie um atributo que recebe o valor recuperado aqui
-    // Agora vá para o arquivo routes/usuario.js
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
 
-    // Todos os valores que eu estiver atribuindo neste arquivo, vão ser utilizadas/"pegadas" no arquivo usuarioController.js 
-    nomeUsuarioServer: nomeVar,
-    emailServer: emailVar,
-    senhaServer: senhaVar
+        // Todos os valores que eu estiver atribuindo neste arquivo, vão ser utilizadas/"pegadas" no arquivo usuarioController.js 
+        nomeUsuarioServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar
     }),
 })
     .then(function (resposta) {
@@ -110,8 +114,8 @@ fetch("/usuarios/cadastrar", {
     }
     })
     .catch(function (resposta) {
-    console.log(`#ERRO: ${resposta}`);
-    finalizarAguardar();
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
     });
 
 return false;
@@ -133,10 +137,10 @@ fetch("/usuarios/listar", {
     });
     })
     .catch(function (resposta) {
-    console.log(`#ERRO: ${resposta}`);
+        console.log(`#ERRO: ${resposta}`);
     });
 }
 
 function sumirMensagem() {
-cardErro.style.display = "none";
+    cardErro.style.display = "none";
 }
