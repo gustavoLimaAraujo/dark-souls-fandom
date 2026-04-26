@@ -59,9 +59,9 @@ else if(nomeVar.length <= 1){
 // Verificando se o usuário e o e-mail é já existe dentro do banco de dados
 for (let i = 0; i < listaUsuariosCadastrados.length; i++) {
     if (listaUsuariosCadastrados[i].nome_usuario == nomeVar && listaUsuariosCadastrados[i].email == emailVar) {
-    idUsuarioVincular = listaUsuariosCadastrados[i].id;
-    console.log("Nome de usuário e E-mail válido.");
-    break;
+        idUsuarioVincular = listaUsuariosCadastrados[i].id;
+        console.log("Nome de usuário e E-mail válido.");
+        break;
     } else {
     cardErro.style.display = "block";
     if(listaUsuariosCadastrados[i].nome_usuario != nomeVar){

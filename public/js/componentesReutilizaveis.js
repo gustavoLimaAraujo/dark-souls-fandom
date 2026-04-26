@@ -35,7 +35,7 @@ if(headerHome != null){
         <header class="cor-primaria">
             <a href="index.html">
                 <figure>
-                    <img src="assets/imgs/solaire-icon.png" alt="Icon do Solaire">
+                    <img src="../assets/imgs/solaire-icon.png" alt="Icon do Solaire">
                 </figure>
             </a>
             <nav>
@@ -55,7 +55,7 @@ if(headerHome != null){
             <button onclick="window.location.href='index.html'">
                 <figure>
                     <h2>Saída</h2>
-                    <img src="assets/imgs/icon-sair.png" alt="Icon de Sair">
+                    <img src="../assets/imgs/icon-sair.png" alt="Icon de Sair">
                 </figure>
             </button>
         </header>
