@@ -8,23 +8,45 @@
 </head>
 <body>
 
-    <div class="header_home"></div>
+        <header class="cor-primaria">
+            <a href="index.html">
+                <figure>
+                    <img src="./assets/imgs/solaire-icon.png" alt="Icon do Solaire">
+                </figure>
+            </a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Desenvolvedor</a>
+                    </li>
+                    <li>
+                        <a href="forum/forum.html">Fórum</a>
+                    </li>
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button onclick="window.location.href='index.html'">
+                <figure>
+                    <h2>Saída</h2>
+                    <img src="./assets/imgs/icon-sair.png" alt="Icon de Sair">
+                </figure>
+            </button>
+        </header>
     
     <section class="section-banner">
         <h1>Bem-vindo(a), Jogador</h1>
 
         <div class="cards">
-            <div class="card">
-                <button onclick="window.location.href='#'">
-                    <h2>Fórum</h2>
-                    <p>Entre em nosso fórum e compartilhe suas dicas, suas dificuldades e suas experiências com os outros jogadores</p>
-                </button>    
+            <div class="card" onclick="window.location.href='forum/forum.html'">
+                <h2>Fórum</h2>
+                <p>Entre em nosso fórum e compartilhe suas dicas, suas dificuldades e suas experiências com os outros jogadores</p>
             </div>
-            <div class="card">
-                <button onclick="window.location.href='#'">
-                    <h2>DashBoard</h2>
-                    <p>Confira como está sua interatividade com os outros usuários na nossa dashboard</p>
-                </button>
+            <div class="card" onclick="window.location.href='#'"> 
+                <h2>DashBoard</h2>
+                <p>Confira como está sua interatividade com os outros usuários na nossa dashboard</p>
             </div>
         </div>
 

@@ -1,6 +1,6 @@
 let header = document.querySelector('.header');
 let footer = document.querySelector('.footer');
-let headerHome = document.querySelector('.header_home');
+let headerHome = document.querySelector('.header-home');
 
 if(header != null){
     header.innerHTML = `
@@ -33,7 +33,7 @@ if(header != null){
 if(headerHome != null){
     headerHome.innerHTML = `
         <header class="cor-primaria">
-            <a href="index.html">
+            <a href="../home.html">
                 <figure>
                     <img src="../assets/imgs/solaire-icon.png" alt="Icon do Solaire">
                 </figure>
@@ -44,7 +44,7 @@ if(headerHome != null){
                         <a href="#">Desenvolvedor</a>
                     </li>
                     <li>
-                        <a href="#">Fórum</a>
+                        <a href="../forum/forum.html">Fórum</a>
                     </li>
                     <li>
                         <a href="#">Dashboard</a>
@@ -52,7 +52,7 @@ if(headerHome != null){
                 </ul>
             </nav>
 
-            <button onclick="window.location.href='index.html'">
+            <button onclick="window.location.href='../index.html'">
                 <figure>
                     <h2>Saída</h2>
                     <img src="../assets/imgs/icon-sair.png" alt="Icon de Sair">
