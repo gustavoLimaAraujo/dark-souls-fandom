@@ -9,7 +9,7 @@
 <body>
 
         <header class="cor-primaria">
-            <a href="index.html">
+            <a href="home.html">
                 <figure>
                     <img src="./assets/imgs/solaire-icon.png" alt="Icon do Solaire">
                 </figure>
@@ -37,7 +37,7 @@
         </header>
     
     <section class="section-banner">
-        <h1>Bem-vindo(a), Jogador</h1>
+        <h1>Bem-vindo(a), <span id="name_user"></span></h1>
 
         <div class="cards">
             <div class="card" onclick="window.location.href='forum/forum.html'">
@@ -55,6 +55,10 @@
     <div class="footer"></div>
 
     <script src="js/componentesReutilizaveis.js"></script>
+
+    <script>
+        name_user.innerHTML = sessionStorage.NOME_USUARIO;        
+    </script>
 
 </body>
 </html>

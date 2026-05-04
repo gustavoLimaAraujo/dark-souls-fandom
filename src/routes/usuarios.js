@@ -13,7 +13,15 @@ router.post("/autenticar", function (req, res) {
 });
 
 router.get("/listar", function (req, res) {
-  usuarioController.listar(req, res);
+    usuarioController.listar(req, res);
 });
+
+router.post("/inserirAjuda", function (req, res) {
+    usuarioController.inserirAjuda(req, res);
+});
+
+router.get("/listarMensagensAjuda", function (req, res) {
+    usuarioController.listarMensagensAjuda(req, res);
+})
 
 module.exports = router;

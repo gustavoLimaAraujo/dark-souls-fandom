@@ -9,8 +9,7 @@ function entrar() {
         mensagem_erro.innerHTML = "Os campos apresentados não podem estar vazios!";
         finalizarAguardar();
         return false;
-    }
-    else {
+    } else {
         setInterval(sumirMensagem, 5000)
     }
 
@@ -39,10 +38,12 @@ function entrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome_usuario;
                 sessionStorage.ID_USUARIO = json.id_usuario;
+                cardErro.style.display = "block"
+                mensagem_erro.innerHTML = "Login realizado com sucesso! Você está sendo direcionado para a nossa home...";
 
                 setTimeout(function () {
                     window.location = "../home.html";
-                }, 1000); // apenas para exibir o loading
+                }, 2000); // apenas para exibir o loading
 
             });
         

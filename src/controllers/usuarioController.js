@@ -90,8 +90,46 @@ function listar(req, res) {
   });
 }
 
+function inserirAjuda(req, res){
+    var mensagem = req.body.mensagemUsuario;
+    var id_usuario = req.body.idUsuario;
+
+    // Faça as validações dos valores
+    if (mensagem == undefined) {
+        res.status(400).send("Sua mensagem está undefined!");
+    }else if(id_usuario == undefined){
+        res.status(400).send("O id do usuário não pode ser indefinido da mensagem!")
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.inserirAjuda(mensagem, id_usuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro da mensagem! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }  
+};
+
+function listarMensagensAjuda(req, res) {
+  usuarioModel.listarMensagensAjuda().then((resultado) => {
+    res.status(200).json(resultado);
+  });
+}
+
 module.exports = {
     autenticar,
     cadastrar,
-    listar
+    listar,
+    inserirAjuda,
+    listarMensagensAjuda
 }

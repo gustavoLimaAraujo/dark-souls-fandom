@@ -594,12 +594,12 @@ footer h2 a {
     align-self: flex-end;
 }
 
-.container-chat .introduction .section-chat .input{
+.container-chat .introduction .section-chat .input form{
     display: flex;
     gap: 1.5rem;
 }
 
-.container-chat .introduction .section-chat .input input{
+.container-chat .introduction .section-chat .input form input{
     width: 85%;
     min-height: 1rem;
     border-radius: 2rem;
@@ -609,7 +609,7 @@ footer h2 a {
     color: #FFF;
 }
 
-.container-chat .introduction .section-chat .input button{
+.container-chat .introduction .section-chat .input form button{
     border: none;
     width: 60px;
     height: 60px;
@@ -621,7 +621,7 @@ footer h2 a {
     background-color: #999;
 }
 
-.container-chat .introduction .section-chat .input button img{
+.container-chat .introduction .section-chat .input form button img{
     width: 70%;
     margin-right: 0.25rem;
 }
