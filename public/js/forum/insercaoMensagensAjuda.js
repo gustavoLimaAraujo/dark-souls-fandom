@@ -1,35 +1,36 @@
-function inserirMensagem() {
-        var mensagem = ipt_mensagem.value;  
-        var id_usuario = sessionStorage.ID_USUARIO;
+function inserirMensagem(event) {
+    // Evita o comportamento padrão de recarregar a página pelo form
+    if (event) {
+        event.preventDefault();
+    }
 
-        console.log("Conteúdo da mensagem: ", mensagem);
-        console.log("ID do usuário: ", id_usuario);
+    var mensagem = ipt_mensagem.value;  
+    var id_usuario = sessionStorage.ID_USUARIO;
 
-        fetch("/usuarios/inserirAjuda", {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                mensagemUsuario: mensagem,
-                idUsuario: id_usuario
-            }),
-        })
-            .then(function (resposta) {
+    console.log("Conteúdo da mensagem: ", mensagem);
+    console.log("ID do usuário: ", id_usuario);
+
+    fetch("/usuarios/inserirAjuda", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            mensagemUsuario: mensagem,
+            idUsuario: id_usuario
+        }),
+    })
+        .then(function (resposta) {
             console.log("resposta: ", resposta);
+            listarMensagensAjuda();
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
 
-            })
-            .catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-                finalizarAguardar();
-            });
+    return false;
+};
 
-        return false;
-    };
-
-    function sumirMensagem() {
-        cardErro.style.display = "none";
-    };
 
 function listarMensagensAjuda() {
     fetch("/usuarios/listarMensagensAjuda", {
@@ -66,9 +67,15 @@ function listarMensagensAjuda() {
                     }
 
                 });
+                rolarParaFinal();
             });
         })
         .catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
 };
+
+function rolarParaFinal() {
+    var containerMensage = document.getElementById("container_mensage");
+    containerMensage.scrollTop = containerMensage.scrollHeight;
+}

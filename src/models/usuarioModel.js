@@ -42,7 +42,7 @@ function inserirAjuda(mensagem, id_usuario){
 
 function listarMensagensAjuda(){
   console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listarMensagensAjuda()")
-  var instrucaoSql = `SELECT texto, fk_usuario, fk_topico, nome_usuario FROM comentario JOIN usuario ON fk_usuario = id_usuario`;
+  var instrucaoSql = `SELECT texto, fk_usuario, fk_topico, nome_usuario FROM comentario JOIN usuario ON fk_usuario = id_usuario ORDER BY id_comentario ASC`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
